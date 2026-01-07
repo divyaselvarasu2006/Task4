@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Task 4</title>
+</head>
+<body>
+
+<input type="password" id="password" placeholder="Enter password">
+<p id="message"></p>
+
+<script>
+    document.getElementById("password").addEventListener("input", function () {
+        let pwd = this.value;
+        let msg = document.getElementById("message");
+
+        if (pwd.length < 6) {
+            msg.innerHTML = "Weak Password";
+            msg.style.color = "red";
+        } else {
+            msg.innerHTML = "Strong Password";
+            msg.style.color = "green";
+        }
+    });
+</script>
+
+</body>
+</html>
